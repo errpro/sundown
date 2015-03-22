@@ -2,8 +2,6 @@ include(../libs.pri)
 
 TEMPLATE = lib
 
-CONFIG += static shared
-
 VERSION = 1.16.0
 
 TARGET = sundown
@@ -11,7 +9,7 @@ TARGET = sundown
 DEPENDPATH = $$PWD
 INCLUDEPATH = $$PWD/html $$PWD/src
 
-QMAKE_CFLAGS += -Qunused-arguments
+macx:QMAKE_CFLAGS += -Qunused-arguments
 
 SOURCES += \
 	$$PWD/html/houdini_href_e.c \
